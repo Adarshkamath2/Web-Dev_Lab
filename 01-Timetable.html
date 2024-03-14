@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    *{
+        font-family: "Comic Neue", cursive;
+  font-weight: 700;
+    }
+        img{
+            height: 80px;
+            width: auto;
+        }
+
+        .container-img{
+            /* margin: 15px; */
+
+            display: flex;
+            /* flex-direction: row; */
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .logo{
+            justify-content: start;
+        }
+        .logo2{
+            display: flex;
+
+        }
+        .heading{
+            padding: 0px 25px;
+            text-align: center;
+            line-height: 0.8;
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            /* width: 100%; */
+        }
+        table{
+    margin: 20px;
+    
+
+}
+
+td{
+    width: 80px;
+    height: 60px;
+    font-weight: 500;
+    text-align: center;
+}
+th{
+    background-color: blanchedalmond;
+    font-size: 15px;
+    width: 80px;
+    height: 60px;
+    text-align: center;
+    font-weight: 1000;
+}
+.staff{
+    display: flex;
+    justify-content: center;
+    
+}
+.staff table{
+    width: 100%;
+}
+.staff table th,td{
+    height: 25px;
+}
+.time-table{
+    display: flex;
+    justify-content: center;
+}
+.time-table table{
+    width: 100%;
+}
+.time-table th,td{
+    height: 40px;
+}
+
+    </style>
+   
+</head>
+
+<body>
+    <header class="container-img">
+        
+        <img src="https://jssstuniv.in/assets/img/logo/jssstulogo.png" alt="" class="logo">
+        <div class="heading">
+            <h1>JSS Science and Technology University</h1>
+            <h2>Sri Jayachamarajendra College of Engineering</h2>
+        </div>
+        <img src="https://sjce.ac.in/wp-content/uploads/2015/08/SJCE_Final-e1440437978629.png" alt="" class="logo2">
+    </header>
+    <div>
+        <h2 class="heading">Timetable for Academic Year 2024</h2>
+        <h4 class = "heading">SEMESTER : VI          SECTION : E</h4>
+       </div>
+       <div class="time-table">
+
+           <table >
+               <thead>
+                   <tr>
+                       <th>Day</th>
+                       <th>7:30 - 8:30</th>
+                       <th>8:30 - 9:30</th>
+                       <th>9:30 - 10:30</th>
+                       <th>10:30 - 11:00</th>
+                       <th>11:00 - 11:50</th>
+                       <th>11:50 - 12:40</th>
+                       <th>12:40 - 1:30</th>
+                       <th>1:30 - 2:30</th>
+                       <th>2:30 - 3:30</th>
+                       <th>3:30 - 4:30</th>
+                       <th>4:30 - 5:30</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td></td>
+                        <td></td>
+                        <td>Python</td>
+                        <td rowspan="6">Break</td>
+                        <td>20CS641</td>
+                        <td>20CS610</td>
+                        <td>20HU612</td>
+                        <td rowspan="6">Break</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td></td>
+                        <td></td>
+                        <td>Inventory</td>
+                        
+                        <td>ML</td>
+                        <td>WEB</td>
+                        <td>20HU612</td>
+                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                    <td>Wednesday</td>
+                    <td></td>
+                    <td>Cloud</td>
+                    <td>Python</td>
+                    
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                
+                <tr>
+                    <td>Thursday</td>
+                    <td></td>
+                    <td>IOT</td>
+                    <td>Inventory</td>
+                    
+                    <td colspan="3">WEB Lab</td>
+                    
+                    <td>IOT</td>
+                    <td>ML</td>
+                    <td>WEB</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td></td>
+                    <td>Cloud</td>
+                    <td>Python</td>
+                    
+                    <td>ML</td>
+                    <td>IOT</td>
+                    <td>WEB</td>
+                    
+                    <td colspan="2">IOT Lab</td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td></td>
+                    <td></td>
+                    <td>Inventory</td>
+                    
+                    <td colspan="3">ML Lab</td>
+                    
+                </tr>
+            </tbody>
+        </table>  <br><br>
+    </div>
+        <div class="staff">
+            
+            <table >
+                <thead>
+                    <tr>
+                        <th>Subject Code</th>
+                      <th>Subject</th>
+                      <th>Credit</th>
+                      <th>Course Instructor</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>20CS610</td>
+                <td>Machine Learning</td>
+                <td>4</td>
+                <td>Prof. Shruthi N M</td>
+            </tr>
+            <tr>
+                <td>20CS620</td>
+                <td>Web development</td>
+                <td>3</td>
+                <td>Prof. Vaishnavi</td>
+            </tr>
+            <tr>
+                <td>20CS630</td>
+                <td>Internet of Things</td>
+                <td>3</td>
+                <td>Prof. Shwethashree G C</td>
+            </tr>
+            <tr>
+                <td>20CS641</td>
+                <td>Cloud Computing</td>
+                <td>3</td>
+                <td>Dr. Anusuya</td>
+            </tr>
+            <tr>
+                <td>20CS63P</td>
+                <td>Internet of Things Laboratory</td>
+                <td>1</td>
+                <td>Prof. Shwethashree G C</td>
+            </tr>
+            <tr>
+                <td>20CS67L</td>
+                <td>Machine Learning Lab</td>
+                <td>1.5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20CS68L</td>
+                <td>Web Development Lab</td>
+                <td>1.5</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>20CS69P</td>
+                <td>Mini Project</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
