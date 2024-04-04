@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      body{
+        margin: 40px;
+        background-color: azure;
+        border: 2px solid black;
+      }
+
+      .container{
+        margin: 20px;
+      }
+      .email {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .section-contents li{
+        margin: 8px 0px;
+      }
+
+      .education-contents h4,h5{
+        margin:0px 5px;
+        /* padding: 2px; */
+      }
+      .project-contents h4,h5{
+        margin:0px 5px;
+        /* padding: 2px; */
+      }
+
+      #sec-1 {
+        width: 50%;
+      }
+
+      #sec-2 {
+        width: 50%;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="poppins.css" />
+  </head>
+  <body>
+    <h1 class="poppins-medium" style="text-align: center">ADARSH KAMATH</h1>
+
+    <span class="email">
+      <div>Email: adarshkamath2@gmail.com</div>
+      <div>Phone : 123456789</div>
+
+      <div>LinkedIn : hola/hola</div>
+    </span>
+    <hr />
+<div class="container">
+
+    <div class="education">
+        <h3>Education</h3>
+        <ul>
+            <li>
+                <div class="education-contents">
+                    <div
+                    style="
+                display: flex;
+                align-items: self-start;
+                justify-content: space-between;
+                "
+            >
+            <h4>JSS Science and Technology University, Mysuru.</h4>
+            <h5 style="color: blue">2021-2025</h5>
+        </div>
+            <p>B.E. in Computer Science and Engineering</p>
+            <p>CGPA : 9.2</p>
+        </div>
+    </li>
+    <li>
+        <div class="education-contents">
+            <span
+            style="
+                display: flex;
+                align-items: self-start;
+                justify-content: space-between;
+                "
+            >
+            <h4>Sharada P.U. College, Mangaluru.</h4>
+            <h5 style="color: blue">2019-2021</h5>
+        </span>
+        <p>Pre University Education</p>
+        <p>Percentage : 95.5%</p>
+    </div>
+</li>
+</ul>
+<hr />
+</div>
+
+<div class="projects">
+    <h3>Projects</h3>
+    <ol>
+        <li>
+            <div class="project-contents">
+                <span
+                style="
+                display: flex;
+                align-items: self-start;
+                justify-content: space-between;
+                "
+            >
+            <h4>Examination Management System</h4>
+            <h5 style="color: blue">HTML, CSS, PHP, Javascript</h5>
+        </span>
+        <p>
+            A Simple Examination Management Sytem with basic CRUD operations
+            and Login Systems.
+        </p>
+    </div>
+</li>
+<li>
+    <div class="project-contents">
+        <span
+        style="
+                display: flex;
+                align-items: self-start;
+                justify-content: space-between;
+                "
+            >
+            <h4>Number Guesser</h4>
+            <h5 style="color: blue">HTML, CSS, Javascript</h5>
+        </span>
+        <p>Simple Game where user guesses a random number.</p>
+    </div>
+</li>
+</ol>
+<hr />
+</div>
+    <div class="section">
+        <section id="sec-1">
+            <h3>Volunteering</h3>
+            <div class="section-contents">
+                <ol>
+                    <li>GDSC - JSSSTU, Mysuru</li>
+                    <li>PhotoOn - JSSSTU, Mysuru</li>
+                    <li>Naada - JSSSTU, Mysuru</li>
+                </ol>
+            </div>
+        </section>
+        <section id="sec-2">
+            <div class="section-contents">
+                <h3>Skills</h3>
+                <ol>
+                    <li>Javascript</li>
+                    <li>Python</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>C/C++</li>
+                </ol>
+            </div>
+            <div class="section-contents">
+                <h3>Languages</h3>
+                <ol>
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>Kannada</li>
+                    <li>Konkani</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
