@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calcultor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        background-color: antiquewhite;
+        margin: 40px;
+      }
+      h2 {
+        text-align: center;
+        margin-top: -30px;
+      }
+      .cal{
+        background-color: rgb(189, 223, 252);
+        border: 2px solid white;
+        margin: 20px;
+        padding: 50px;
+        border-radius: 10px;
+
+      }
+
+      .calculator{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .calculator table{
+        border-collapse: collapse;
+        border: 2px solid rgb(46, 120, 246);
+
+        
+        td{
+            display: absolute;
+            align-items: center;
+            text-align: center;
+            margin: 10px;
+        }
+      }
+
+      input[type="button"]{
+        border: none;
+        background: rgb(0, 0, 129);
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 20px;
+      }
+      
+
+      .display-box{
+        margin: 5px;
+        padding: 20px;
+        width: 80%;
+      
+      }
+
+
+     
+    </style>
+  </head>
+  <body>
+    <div class="cal">
+      <h2>Calculator</h2>
+      <div class="calculator">
+      <table class="table">
+        <thead>
+          <tr class="input-numbers">
+            <td colspan="5">
+               <input class="display-box" type="text" id="result" disabled />
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="digits">
+            <td> 
+                <input type="button" value="7" 
+                onclick="display('7')" /> </td>
+                <td> <input type="button" value="8" onclick="display('8')" /> </td>
+                <td> <input type="button" value="9" onclick="display('9')" /> </td>
+                <td> <input type="button" value="*" onclick="display('*')" /> </td>
+                <td> <input type="button" value="Clear" onclick="clearScreen()" id="btn" /> </td>
+          </tr>
+          <tr class="digits">
+                <td> <input type="button" value="4"
+                onclick="display('4')" /> </td>
+                <td> <input type="button" value="5" onclick="display('5')" /> </td>
+                <td> <input type="button" value="6" onclick="display('6')" /> </td>
+                <td> <input type="button" value="*" onclick="display('*')" /> </td>
+                <td> <input type="button" value="/" onclick="display('/')" /> </td>
+          </tr>
+          <tr class="digits">
+            <td> <input type="button" value="1" onclick="display('1')" /> </td>
+            <td> <input type="button" value="2" onclick="display('2')" /> </td>
+            <td> <input type="button" value="3" onclick="display('3')" /> </td>
+            <td rowspan="2"> <input type="button" value="+" onclick="display('+')" /> </td>
+            <td> <input type="button" value="-" onclick="display('-')" /> </td>
+          </tr>
+          <tr class="digits">
+            <td><input type="button" value="." onclick="display('.')" /> </td>
+            <td> <input type="button" value="00" onclick="display('00')" /> </td>
+            <td> <input type="button" value="0" onclick="display('0')" /> </td>
+            <td> <input type="button" value="=" onclick="calculate()" id="btn" /> </td>
+           
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <script>
+        function clearScreen() {
+            document.getElementById("result").value = "";
+        }
+        function display(value) {
+            document.getElementById("result").value += value;
+        }
+        function calculate() {
+            var p = document.getElementById("result").value;
+            var q = eval(p);
+            document.getElementById("result").value = q;
+        }
+    </script>
+  </body>
+</html>
