@@ -1,99 +1,161 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Form Validation Example</title>
-</head>
-<body>
+    <style>
+      * {
+        font-family: "open sans";
+        font-size: 16px;
+        font-weight: 600;
+      }
+      h1 {
+        margin-top: 40px;
+        text-align: center;
+        font-weight: 800;
+        font-size: 20px;
+      }
+      .form-main {
+        border: 1px solid gray;
+        background-color: azure;
+        width: 50vh;
+        margin: auto;
+        padding: 30px;
+        margin-top: 30px;
+        border-radius: 5px;
+      }
+      #myForm {
+        margin: auto;
+      }
+      label {
+        margin: 50px 0;
+      }
+      .form-group {
+        margin: 10px 0;
+      }
+      button {
+        margin: 50px 0;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+        font-weight: 400;
+
+        min-width: 70%;
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        background-color: #f5f5f5;
+        padding: 8px 10px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
     <h1>Form Validation Example</h1>
+    <div class="form-main">
+      <form id="myForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <br />
 
-    <form id="myForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name">
-        <br>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+        </div>
+        <br />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email">
-        <br>
+        <div class="form-group">
+          <label for="mobile">Mobile No:</label>
+          <input type="tel" id="mobile" />
+        </div>
 
-        <label for="mobile">Mobile No:</label>
-        <input type="tel" id="mobile">
-        <br>
+        <br />
 
-        <label for="gender">Gender:</label>
-        <select id="gender">
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select id="gender">
             <option value="">Select Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
-        </select>
-        <br>
+          </select>
+        </div>
+        <br />
 
+        <div class="form-group"></div>
         <label for="color">Favorite Color:</label>
-        <input type="text" id="color">
-        <br>
+        <input type="text" id="color" />
+        <br />
 
         <button type="submit">Submit</button>
-    </form>
+      </form>
 
-    <h2>Combined Information</h2>
-    <textarea id="displayInfo" rows="5" cols="30" readonly></textarea>
-
+      <h2>Combined Information</h2>
+      <textarea id="displayInfo" rows="5" cols="30" readonly></textarea>
+    </div>
     <script>
-        const form = document.getElementById('myForm');
-        const displayInfo = document.getElementById('displayInfo');
+      const form = document.getElementById("myForm");
+      const displayInfo = document.getElementById("displayInfo");
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault();
-            if (validateForm()) {
-                displayCombinedInfo();
-            }
-        });
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (validateForm()) {
+          displayCombinedInfo();
+        }
+      });
 
-        function validateForm() {
-            const nameInput = document.getElementById('name');
-            const emailInput = document.getElementById('email');
-            const mobileInput = document.getElementById('mobile');
-            const genderInput = document.getElementById('gender');
-            const colorInput = document.getElementById('color');
+      function validateForm() {
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const mobileInput = document.getElementById("mobile");
+        const genderInput = document.getElementById("gender");
+        const colorInput = document.getElementById("color");
 
-            if (nameInput.value.trim().length < 10) {
-                alert('Name should be less than or equal to 10 characters');
-                return false;
-            }
-
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (emailInput.value.trim() === '' || !emailRegex.test(emailInput.value.trim())) {
-                alert('Email is required in correct format');
-                return false;
-            }
-
-            if (!/^\d{10}$/.test(mobileInput.value.trim())) {
-                alert('Mobile No should be exactly 10 digits');
-                return false;
-            }
-
-            if (genderInput.value === '') {
-                alert('Gender is required');
-                return false;
-            }
-
-            if (colorInput.value === '') {
-                alert('Favorite Color is required');
-                return false;
-            }
-            return true;
+        if (nameInput.value.trim().length < 10) {
+          alert("Name should be less than or equal to 10 characters");
+          return false;
         }
 
-        function displayCombinedInfo() {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const mobile = document.getElementById('mobile').value;
-            const gender = document.getElementById('gender').value;
-            const color = document.getElementById('color').value;
-
-            const combinedInfo = `Name: ${name}\nEmail: ${email}\nMobile No: ${mobile}\nGender: ${gender}\nFavorite Color: ${color}`;
-            displayInfo.value = combinedInfo;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (
+          emailInput.value.trim() === "" ||
+          !emailRegex.test(emailInput.value.trim())
+        ) {
+          alert("Email is required in correct format");
+          return false;
         }
+
+        if (!/^\d{10}$/.test(mobileInput.value.trim())) {
+          alert("Mobile No should be exactly 10 digits");
+          return false;
+        }
+
+        if (genderInput.value === "") {
+          alert("Gender is required");
+          return false;
+        }
+
+        if (colorInput.value === "") {
+          alert("Favorite Color is required");
+          return false;
+        }
+        return true;
+      }
+
+      function displayCombinedInfo() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const mobile = document.getElementById("mobile").value;
+        const gender = document.getElementById("gender").value;
+        const color = document.getElementById("color").value;
+
+        const combinedInfo = `Name: ${name}\nEmail: ${email}\nMobile No: ${mobile}\nGender: ${gender}\nFavorite Color: ${color}`;
+        displayInfo.value = combinedInfo;
+      }
     </script>
-</body>
+  </body>
 </html>
