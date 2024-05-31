@@ -1,130 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <style>
-        *{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-        body{
-            margin: 40px;
-        }
-        #f{
-            margin: auto;
-            width:100%;
-            max-width: 70vh;
-            height: 100%;
-            border: 1px solid;
-            display: block;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: aliceblue;
-            border: 2px solid white;
-            border-radius: 5px;
-            box-shadow: 1px 1px 5px gray;
-            box-sizing: border-box;
+      * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      body {
+        margin: 40px;
+      }
+      #f {
+        margin: auto;
+        width: 100%;
+        max-width: 70vh;
+        height: 100%;
+        border: 1px solid;
+        display: block;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+        border: 2px solid white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px gray;
+        box-sizing: border-box;
+      }
+      input {
+        border: 1px solid rgb(68, 136, 196);
+        border-radius: 4px;
+        box-sizing: border-box;
+        box-shadow: 1px 1px 3px gray;
+      }
 
+      ul {
+        list-style: none;
+      }
 
-        }
-        input{
-            border: 1px solid rgb(68, 136, 196);
-            border-radius: 4px;
-            box-sizing: border-box;
-            box-shadow: 1px 1px 3px gray;
-        }
+      h2 {
+        text-align: center;
+        color: white;
+      }
+      li {
+        height: 30px;
+        line-height: 30px;
+      }
+      .info {
+        background-color: white;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 20px;
+        border: 2px solid white;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px gray;
+        box-sizing: border-box;
+      }
+      #btn button {
+        background-color: greenyellow;
+        border-radius: 5px;
+        margin-left: 30vh;
+        border: 2px solid gray;
+        padding: 7px;
+        box-shadow: 1px 1px 5px gray;
+      }
 
-        ul{
-            list-style: none;
-        }
-
-        h2{
-            text-align: center;
-            color: white;
-        }
-        li{
-            height: 30px;
-            line-height: 30px;
-        }
-        .info{
-            background-color: white;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            margin-top: 20px;
-            border: 2px solid white;
-            border-radius: 5px;
-            box-shadow: 1px 1px 5px gray;
-            box-sizing: border-box;
-        }
-        #btn button{
-            background-color: greenyellow;
-            border-radius: 5px;
-            margin-left: 30vh;
-            border: 2px solid gray;
-            padding: 7px;
-            box-shadow: 1px 1px 5px gray;
-        }
-
-        .main-body{
+      .main-body {
         padding: 20px;
-            border: 1px solid white;
-            border-radius: 5px;
-            box-shadow: 2px 2px 5px gray;
-            background-color: rgb(35, 22, 186);
-
-        }
-
+        border: 1px solid white;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px gray;
+        background-color: rgb(35, 22, 186);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main-body">
-        <h2>XHTML Form</h2>
+      <h2>XHTML Form</h2>
 
-    
-
-    <div id="f">
-        <form >
-            <ul align="center">
-                <li>
-                    <label for="regno">Seat Number : </label>
-                    <input type="text" id = "regno" required>
-                </li>
-                <li>
-                    <label for="subcode">Subject Code :</label>
-                    <input type="text" id = "subcode" required>
-                </li>
-                <li>
-                    <label for="marks-1">Test-1 Marks : </label>
-                    <input type="text" id = "marks-1" required>
-                </li>
-                <li>
-                    <label for="marks-1">Test-2 Marks : </label>
-                    <input type="text" id = "marks-2" required>
-                </li>
-                <li>
-                    <label for="subcode">Test-3 Marks : </label>
-                    <input type="text" id = "marks-3" required>
-                </li>
-            </ul>
-            <div class="center" id="btn">
-                <button type="submit" id="btn">Submit</button>
-            </div>
-            <!-- <div class="info">
-                <h6>Information : </h6>
-                <p></p>
-            </div> -->
+      <div id="f">
+        <form>
+          <ul align="center">
+            <li>
+              <label for="regno">Seat Number : </label>
+              <input type="text" id="regno" required />
+            </li>
+            <li>
+              <label for="subcode">Subject Code :</label>
+              <input type="text" id="subcode" required />
+            </li>
+            <li>
+              <label for="marks-1">Test-1 Marks : </label>
+              <input type="text" id="marks-1" required />
+            </li>
+            <li>
+              <label for="marks-1">Test-2 Marks : </label>
+              <input type="text" id="marks-2" required />
+            </li>
+            <li>
+              <label for="subcode">Test-3 Marks : </label>
+              <input type="text" id="marks-3" required />
+            </li>
+          </ul>
+          <div class="center" id="btn">
+            <button type="submit" id="btn">Submit</button>
+          </div>
         </form>
+      </div>
+      <div class="info"><p id="res" align="center"></p></div>
     </div>
-    <div class="info"><p id="res" align="center"></p></div>
-</div>
-
-
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
