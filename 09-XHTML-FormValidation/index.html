@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Form Validation</title>
+    <script type="text/javascript">
+      function validateForm(e) {
+        e.preventDefault();
+        // Get form fields
+        var userId = document.getElementById("userID").value;
+        var name = document.getElementById("name").value;
+        var password = document.getElementById("password").value;
+        var email = document.getElementById("email").value;
+
+        // User ID validation (5 to 12 characters)
+        if (userId.length < 5 || userId.length > 12) {
+          alert("User ID must be between 5 and 12 characters long.");
+          return false;
+        }
+
+        // Name validation (at least 15 characters, only alphabets)
+        if (name.length < 15) {
+          alert("Name must be at least 15 characters long.");
+          return false;
+        }
+        for (var i = 0; i < name.length; i++) {
+          if (
+            !(
+              (name[i] >= "A" && name[i] <= "Z") ||
+              (name[i] >= "a" && name[i] <= "z") ||
+              name[i] === " "
+            )
+          ) {
+            alert("Name must contain only alphabets and spaces.");
+            return false;
+          }
+        }
+
+        // Password validation (8 characters, 1 uppercase, 1 special character, alphanumeric)
+        if (password.length < 8) {
+          alert("Password must be at least 8 characters long.");
+          return false;
+        }
+        var hasUppercase = false;
+        var hasSpecialChar = false;
+        var hasDigit = false;
+        var hasLetter = false;
+        var specialChars = "!@#$%^&*()";
+        for (var i = 0; i < password.length; i++) {
+          var char = password[i];
+          if (char >= "A" && char <= "Z") hasUppercase = true;
+          if (specialChars.indexOf(char) !== -1) hasSpecialChar = true;
+          if (char >= "0" && char <= "9") hasDigit = true;
+          if ((char >= "a" && char <= "z") || (char >= "A" && char <= "Z"))
+            hasLetter = true;
+        }
+        if (!hasUppercase || !hasSpecialChar || !hasDigit || !hasLetter) {
+          alert(
+            "Password must be at least 8 characters long and include one uppercase letter, one special character, and alphanumeric characters."
+          );
+          return false;
+        }
+
+        // Email validation (basic structure)
+        var atPos = email.indexOf("@");
+        var dotPos = email.lastIndexOf(".");
+        if (atPos < 1 || dotPos < atPos + 2 || dotPos + 2 >= email.length) {
+          alert("Invalid email address.");
+          return false;
+        }
+
+        // If all validations pass, display the details
+        document.getElementById("validDetails").value =
+          "User ID: " +
+          userId +
+          "\nName: " +
+          name +
+          "\nPassword: " +
+          password +
+          "\nEmail: " +
+          email;
+
+        return true;
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validateForm()">
+      <label for="userID">User ID:</label>
+      <input type="text" id="userID" name="userID" /><br />
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" /><br />
+
+      <label for="email">E-mail:</label>
+      <input type="text" id="email" name="email" /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <textarea id="validDetails" rows="10" cols="50" readonly></textarea>
+  </body>
+</html>
